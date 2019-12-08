@@ -1,23 +1,22 @@
 {
   "files": {
     "main.css": "/radiowizard/static/css/main.d1b05096.chunk.css",
-    "main.js": "/radiowizard/static/js/main.3928de4f.chunk.js",
-    "main.js.map": "/radiowizard/static/js/main.3928de4f.chunk.js.map",
+    "main.js": "/radiowizard/static/js/main.4a6b0e4a.chunk.js",
+    "main.js.map": "/radiowizard/static/js/main.4a6b0e4a.chunk.js.map",
     "runtime-main.js": "/radiowizard/static/js/runtime-main.341808fa.js",
     "runtime-main.js.map": "/radiowizard/static/js/runtime-main.341808fa.js.map",
-    "static/js/2.1b11ea37.chunk.js": "/radiowizard/static/js/2.1b11ea37.chunk.js",
-    "static/js/2.1b11ea37.chunk.js.map": "/radiowizard/static/js/2.1b11ea37.chunk.js.map",
+    "static/js/2.da4620ea.chunk.js": "/radiowizard/static/js/2.da4620ea.chunk.js",
+    "static/js/2.da4620ea.chunk.js.map": "/radiowizard/static/js/2.da4620ea.chunk.js.map",
     "index.html": "/radiowizard/index.html",
-    "precache-manifest.d5c5b2d71e2ec1fa5185c3532faec053.js": "/radiowizard/precache-manifest.d5c5b2d71e2ec1fa5185c3532faec053.js",
+    "precache-manifest.4f68b57d7683fa3f8a2abd2ffdac4c15.js": "/radiowizard/precache-manifest.4f68b57d7683fa3f8a2abd2ffdac4c15.js",
     "service-worker.js": "/radiowizard/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/radiowizard/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.1b11ea37.chunk.js.LICENSE": "/radiowizard/static/js/2.1b11ea37.chunk.js.LICENSE",
-    "static/media/logo.svg": "/radiowizard/static/media/logo.5d5d9eef.svg"
+    "static/js/2.da4620ea.chunk.js.LICENSE": "/radiowizard/static/js/2.da4620ea.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.341808fa.js",
-    "static/js/2.1b11ea37.chunk.js",
+    "static/js/2.da4620ea.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.3928de4f.chunk.js"
+    "static/js/main.4a6b0e4a.chunk.js"
   ]
 }
