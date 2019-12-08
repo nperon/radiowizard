@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import socket from './utilities/socketConnection';
+import socket from './utilities/socketConnection';
 
 class App extends Component {
   constructor() {
@@ -17,9 +17,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    /* socket.on('tunes', data => {
+    socket.on('tunes', data => {
       console.log('received: ', data);
-    }); */
+    });
   }
 }
 
