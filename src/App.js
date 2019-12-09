@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import socket from './utilities/socketConnection';
 
 class App extends Component {
@@ -10,7 +9,7 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
+      <div>
         <h1>Sanity check!</h1>
       </div>
     );
