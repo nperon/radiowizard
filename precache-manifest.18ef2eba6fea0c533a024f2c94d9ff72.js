@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eca86fe27d8c0c4b49405c4f57d22338",
+    "revision": "bba2b3729e515c0e23d612b6aebcfe39",
     "url": "/radiowizard/index.html"
   },
   {
-    "revision": "49eb5c4bac716687359f",
-    "url": "/radiowizard/static/css/main.72b53921.chunk.css"
+    "revision": "bfdc2fe10ace16d499fc",
+    "url": "/radiowizard/static/css/main.6b0075bf.chunk.css"
   },
   {
     "revision": "e48679d3598349d2f7a8",
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radiowizard/static/js/2.572d012b.chunk.js.LICENSE"
   },
   {
-    "revision": "49eb5c4bac716687359f",
+    "revision": "bfdc2fe10ace16d499fc",
     "url": "/radiowizard/static/js/main.90023f85.chunk.js"
   },
   {
     "revision": "eb91bd126810b3effd4a",
     "url": "/radiowizard/static/js/runtime-main.341808fa.js"
+  },
+  {
+    "revision": "2a8d6901ffca8d771a81c3f16d19d6cf",
+    "url": "/radiowizard/static/media/Radio_towers_on_Sandia_Peak-copy_ConvertImage.2a8d6901.jpg"
   }
 ]);
