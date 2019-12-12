@@ -1,26 +1,29 @@
 :root {
   --color-primary: #3490DE;
-  --color-primary-light-1: #399ef4;
-  --color-primary-light-2: #6FE7DD;
+  --color-primary-light: #6FE7DD;
   --color-primary-dark: #2763a7;
   --color-secondary: #6639A6;
   --color-secondary-dark: #521262;
-  --color-grey-light: #f0eeee;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-2-transparent: rgba(250, 249, 249, 0.7);
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --color-white: #fff;
   --color-black: #000;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
-  --default-font-size: 1.6rem;
-  --line:  1px solid var(--color-grey-light); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06); }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
   box-sizing: inherit; }
 
 html {
@@ -31,13 +34,30 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  font-size: var(--default-font-size);
   background: url("../../src/assets/Radio_towers_on_Sandia_Peak-copy_ConvertImage.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 100vh; }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2-transparent);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+  display: flex; }
+
+.content {
+  border: solid; }
+
+.tune-view {
+  border: solid; }
+
+.header {
   border: solid;
-  border-width: 6px;
-  border-color: green; }
+  height: 7rem; }
+
+.sidebar {
+  border: solid; }

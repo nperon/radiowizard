@@ -1,0 +1,25 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2-transparent);
+    box-shadow: var(--shadow-dark);
+    min-height: 50rem;
+    display: flex;
+}
+
+.content {
+    border: solid;
+}
+
+.tune-view {
+    border: solid;
+}
+
+.header {
+    border: solid;
+    height: 7rem;
+}
+
+.sidebar {
+    border: solid;
+}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import socket from './utilities/socketConnection';
 
 class App extends Component {
@@ -9,9 +9,19 @@ class App extends Component {
 
   render () {
     return (
-      <div>
-        <h1>Sanity check!</h1>
-      </div>
+      <Fragment>
+        <div class="content">
+          <header class="header">
+            Header part
+          </header>
+          <div class="tune-view">
+            tune
+          </div>
+        </div>
+        <nav class="sidebar">
+          Navigation
+        </nav>
+      </Fragment>
     );
   }
 
