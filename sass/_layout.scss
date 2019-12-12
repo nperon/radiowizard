@@ -9,6 +9,8 @@
 
 .content {
     border: solid;
+    display: flex;
+    flex-direction: column;
 }
 
 .tune-view {
@@ -22,4 +24,5 @@
 
 .sidebar {
     border: solid;
+    width: 30rem;
 }

@@ -50,7 +50,9 @@ body {
   display: flex; }
 
 .content {
-  border: solid; }
+  border: solid;
+  display: flex;
+  flex-direction: column; }
 
 .tune-view {
   border: solid; }
@@ -60,4 +62,5 @@ body {
   height: 7rem; }
 
 .sidebar {
-  border: solid; }
+  border: solid;
+  width: 30rem; }
