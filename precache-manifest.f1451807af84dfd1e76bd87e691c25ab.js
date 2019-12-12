@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b059c130db9d12dda9b0e83e9d8e662a",
+    "revision": "f9e31b82f6acf4d8b892307125d654d0",
     "url": "/radiowizard/index.html"
   },
   {
-    "revision": "937bda6c46e991ff2033",
-    "url": "/radiowizard/static/css/main.03125319.chunk.css"
+    "revision": "c58138bb039dc4748371",
+    "url": "/radiowizard/static/css/main.64edd306.chunk.css"
   },
   {
     "revision": "e825cf7249cd4d0b13d9",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radiowizard/static/js/2.d2b30245.chunk.js.LICENSE"
   },
   {
-    "revision": "937bda6c46e991ff2033",
+    "revision": "c58138bb039dc4748371",
     "url": "/radiowizard/static/js/main.a36fae31.chunk.js"
   },
   {
