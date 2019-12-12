@@ -39,10 +39,14 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: var(--color-primary);
     font-size: var(--default-font-size);
-    background-image: linear-gradient(to right bottom, var(--color-primary-light-1), var(--color-primary-dark));
+    background: url('../../src/assets/Radio_towers_on_Sandia_Peak-copy_ConvertImage.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;    
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
     min-height: 100vh;
+    border: solid;
+    border-width: 6px;
+    border-color: green;
 }
