@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Credentials
+
+Antenna icon was downloaded from [www.pngrepo.com](https://www.pngrepo.com/svg/27511/antenna).
+Class SVGIcon is from [blog.lftechnology.com](https://blog.lftechnology.com/using-svg-icons-components-in-react-44fbe8e5f91).
