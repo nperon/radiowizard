@@ -10,7 +10,6 @@
 .search {
     flex: 0 0 40%;
     display: flex;
-    // align-items: center;
     justify-content: center;
 
     &__input {
@@ -89,5 +88,27 @@
         position: absolute;
         top: 2.8rem;
         right: 0rem;
+    }
+}
+
+////////////////////////////////////////////////////
+// STATION-CARD
+.station-card {
+    border: solid;
+    border-color: var(--color-black);
+    border-width: 1px;
+    width: 88%;
+    padding: 0.6rem 1.2rem;
+    margin: .8rem;
+    text-align: center;
+    &.left {
+        align-self: flex-start;
+    }
+    &.right {
+        align-self: flex-end;
+    }
+    &:hover {
+        background-color: var(--color-grey-light-3);
+        cursor: pointer;
     }
 }

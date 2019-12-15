@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import socket from './utilities/socketConnection';
+import { connect } from 'react-redux';
+// import socket from './utilities/socketConnection';
 import antenna from './assets/antenna-pngrepo-com.png';
 import SVGIcon from './SVGIcon';
+import StationCard from './components/StationCard';
 
 class App extends Component {
   constructor() {
@@ -10,6 +12,7 @@ class App extends Component {
   }
 
   render () {
+    const { stations } = this.props;
     return (
       <Fragment>
         <div className='content'>
@@ -33,40 +36,26 @@ class App extends Component {
           </div>
         </div>
         <nav className='sidebar'>
-          <div className='sidebar__station-card left'>
-            <h3 className='name'><a>BBC Radio 2</a></h3>
-            <p className='artist'>Skeewiff</p>
-          </div>
-          <div className='sidebar__station-card right'>
-            <h3 className='name'><a>Radio X</a></h3>
-            <p className='artist'>Ocean Colour Scene</p>
-          </div>
-          <div className='sidebar__station-card left'>
-            <h3 className='name'><a>Planet Rock</a></h3>
-            <p className='artist'>Cee Cee James</p>
-          </div>
-          <div className='sidebar__station-card right'>
-            <h3 className='name'><a>Planet Rock</a></h3>
-            <p className='artist'>Cee Cee James</p>
-          </div>
-          <div className='sidebar__station-card left'>
-            <h3 className='name'><a>Planet Rock</a></h3>
-            <p className='artist'>Cee Cee James</p>
-          </div>
-          <div className='sidebar__station-card right'>
-            <h3 className='name'><a>Planet Rock</a></h3>
-            <p className='artist'>Cee Cee James</p>
-          </div>
+          {stations.map( (station, id) => 
+            <StationCard
+              key={`key_${station.name}`}
+              id={id}
+              name={station.name} 
+              artist ={station.artist}
+            />
+          )}
         </nav>
       </Fragment>
     );
   }
 
-  componentDidMount() {
+  /* componentDidMount() {
     socket.on('tunes', data => {
       console.log('received: ', data);
     });
-  }
+  } */
 }
 
-export default App;
+export default connect(
+  ({ stations }) => ({ stations })
+)(App);
