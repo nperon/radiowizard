@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-// import socket from './utilities/socketConnection';
+import socket from './utilities/socketConnection';
 import antenna from './assets/antenna-pngrepo-com.png';
 import SVGIcon from './SVGIcon';
 import StationCard from './components/StationCard';
+import { updateStationsAction } from './actions/stations'; 
 
 class App extends Component {
   constructor() {
@@ -27,21 +28,20 @@ class App extends Component {
             <nav className="stations-nav">
               <div className="stations-nav__icon-box">
                 <SVGIcon name="globe" className='stations-nav__icon' />
-                <span className="stations-nav__notification">3</span>
+                <span className="stations-nav__notification">{Object.keys(stations).length}</span>
               </div>
             </nav>
           </header>
           <div className='tune-view'>
-            tune
           </div>
         </div>
         <nav className='sidebar'>
-          {stations.map( (station, id) => 
+          {Object.keys(stations).map( (name, id) => 
             <StationCard
-              key={`key_${station.name}`}
+              key={`key_${stations[name].name}`}
               id={id}
-              name={station.name} 
-              artist ={station.artist}
+              name={stations[name].name} 
+              artist ={stations[name].artist}
             />
           )}
         </nav>
@@ -49,13 +49,16 @@ class App extends Component {
     );
   }
 
-  /* componentDidMount() {
+  componentDidMount() {
     socket.on('tunes', data => {
-      console.log('received: ', data);
+      this.props.updateStations(data);
     });
-  } */
+  }
 }
 
 export default connect(
-  ({ stations }) => ({ stations })
+  ({ stations }) => ({ stations }),
+  dispatch => ({
+    updateStations: data => dispatch( updateStationsAction(data) )
+  })
 )(App);
