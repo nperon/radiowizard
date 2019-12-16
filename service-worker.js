@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/radiowizard/precache-manifest.cf76e4deab8eb4276bcbca6021c1aa37.js"
+  "/radiowizard/precache-manifest.aafa0fca77adb27a8f1cafc5f428edd1.js"
 );
 
 self.addEventListener('message', (event) => {
