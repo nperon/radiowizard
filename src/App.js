@@ -4,6 +4,7 @@ import socket from './utilities/socketConnection';
 import antenna from './assets/antenna-pngrepo-com.png';
 import SVGIcon from './SVGIcon';
 import StationCard from './components/StationCard';
+import FeaturedCard from './components/FeaturedCard';
 import { updateStationsAction } from './actions/stations'; 
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
   }
 
   render () {
-    const { stations } = this.props;
+    const { stations, featured } = this.props;
     return (
       <Fragment>
         <div className='content'>
@@ -33,12 +34,13 @@ class App extends Component {
             </nav>
           </header>
           <div className='tune-view'>
+            {featured.map(item => <FeaturedCard key={`featured_${item}`} stationName={item} />)}
           </div>
         </div>
         <nav className='sidebar'>
           {Object.keys(stations).map( (name, id) => 
             <StationCard
-              key={`key_${stations[name].name}`}
+              key={`station_${stations[name].name}`}
               id={id}
               name={stations[name].name} 
               artist ={stations[name].artist}
@@ -57,7 +59,7 @@ class App extends Component {
 }
 
 export default connect(
-  ({ stations }) => ({ stations }),
+  ({ stations, featured }) => ({ stations, featured }),
   dispatch => ({
     updateStations: data => dispatch( updateStationsAction(data) )
   })

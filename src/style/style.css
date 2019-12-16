@@ -123,6 +123,14 @@ body {
     background-color: var(--color-grey-light-3);
     cursor: pointer; }
 
+.featured-card {
+  background-color: var(--color-grey-light-2);
+  border-width: 1px;
+  width: 84%;
+  padding: 0.6rem 1.2rem;
+  margin: 1.2rem;
+  text-align: center; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -135,12 +143,13 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column; }
+  flex-grow: 1; }
 
 .tune-view {
-  flex-grow: 1; }
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .header {
   font-size: 1.4rem;

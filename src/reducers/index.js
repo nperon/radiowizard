@@ -1,6 +1,8 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import StationsReducer from './stations';
+import FeaturedReducer from './featured';
 
 export default combineReducers({
-	stations: StationsReducer
+	stations: StationsReducer,
+	featured: FeaturedReducer
 });
