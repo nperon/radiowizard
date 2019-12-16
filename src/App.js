@@ -10,7 +10,18 @@ import { updateStationsAction } from './actions/stations';
 class App extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = { value: '' }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log('A value was submitted: ' + this.state.value);
+    event.preventDefault();
   }
 
   render () {
@@ -20,8 +31,8 @@ class App extends Component {
         <div className='content'>
           <header className='header'>
             <img src={antenna} alt="antenna" className='logo' />
-            <form action="#" className='search'>
-              <input type="text" className='search__input' placeholder="placeholder text" />
+            <form action="#" className='search' onSubmit={this.handleSubmit}>
+              <input type="text" className='search__input' placeholder="placeholder text" value={this.state.value} onChange={this.handleChange} />
               <button className='search__button'>
                 <SVGIcon name="magnifying-glass" className='search__icon' />
               </button>
