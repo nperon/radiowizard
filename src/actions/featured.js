@@ -8,7 +8,7 @@ export const updateFeaturedAction = data => ({
     payload: data
 });
 
-export const searchForTextAction = text => ({
+export const searchForTextAction = (text, stations) => ({
     type: Types.SEARCH_FOR_TEXT,
-    payload: text
+    payload: { text, stations }
 });

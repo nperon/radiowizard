@@ -9,9 +9,12 @@ import App from './App';
 import { Types, updateFeaturedAction } from './actions/featured';
 
 const searchMiddleware = store => next => action => {
-    console.log('in middleware ', action.type);
     if ( action.type === Types.SEARCH_FOR_TEXT ) {
-        next(updateFeaturedAction([0,1,2]));
+        const allStations = action.payload.stations;
+        const stationsWithRightArtist = Object.keys(allStations).filter(
+            name => allStations[name].artist && allStations[name].artist.search(action.payload.text) >=0
+        );
+        next(updateFeaturedAction(stationsWithRightArtist));
         return;
     }
     next(action);

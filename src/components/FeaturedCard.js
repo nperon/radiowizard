@@ -4,7 +4,7 @@ import { updateFeaturedAction } from '../actions/featured';
 
 class FeaturedCard extends Component {
     render() {
-        const station = this.props.stations && this.props.stationName
+        const station = (this.props.stations && this.props.stationName)
             ? this.props.stations[this.props.stationName]
             : null;
         return <div className={'featured-card'}>

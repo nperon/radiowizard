@@ -6,6 +6,7 @@ import SVGIcon from './SVGIcon';
 import StationCard from './components/StationCard';
 import FeaturedCard from './components/FeaturedCard';
 import { updateStationsAction } from './actions/stations'; 
+import { searchForTextAction } from './actions/featured'; 
 
 class App extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class App extends Component {
   }
 
   handleSubmit(event) {
-    console.log('A value was submitted: ' + this.state.value);
+    this.props.searchText(this.state.value.trim(), this.props.stations);
     event.preventDefault();
   }
 
@@ -72,6 +73,7 @@ class App extends Component {
 export default connect(
   ({ stations, featured }) => ({ stations, featured }),
   dispatch => ({
-    updateStations: data => dispatch( updateStationsAction(data) )
+    updateStations: data => dispatch( updateStationsAction(data) ),
+    searchText: (text, stations) => dispatch( searchForTextAction(text, stations) ),
   })
 )(App);
