@@ -21,6 +21,6 @@ class StationCard extends Component {
 export default connect(
     null,
     dispatch => ({
-        updateFeatured: (name) => dispatch( updateFeaturedAction(name) )
+        updateFeatured: (name) => dispatch( updateFeaturedAction([ name ]) )
     })
 )(StationCard);
