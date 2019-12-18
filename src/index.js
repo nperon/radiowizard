@@ -1,6 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style/style.css';
-import App from './App';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './style/style.css';
+import reducers from './reducers';
+import App from './App';
+import { searchMiddleware } from './middlewares/searchMiddleware';
+
+const store = createStore(
+    reducers,
+    applyMiddleware(searchMiddleware)
+);
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>, 
+    document.getElementById('root')
+);

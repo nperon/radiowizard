@@ -10,7 +10,6 @@
 .search {
     flex: 0 0 40%;
     display: flex;
-    // align-items: center;
     justify-content: center;
 
     &__input {
@@ -24,6 +23,11 @@
         width: 90%;
         transition: all .2s;
         margin-right: -3.25rem;
+        &:hover {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
         &:focus {
             outline: none;
             width: 100%;
@@ -35,6 +39,9 @@
         }
     }
 
+    &__input:hover + &__button {
+        background-color: var(--color-grey-light-3);
+    }
     &__input:focus + &__button {
         background-color: var(--color-grey-light-3);
     }
@@ -90,4 +97,37 @@
         top: 2.8rem;
         right: 0rem;
     }
+}
+
+////////////////////////////////////////////////////
+// STATION-CARD
+.station-card {
+    border: solid;
+    border-color: var(--color-black);
+    border-width: 1px;
+    width: 88%;
+    padding: 0.6rem 1.2rem;
+    margin: .8rem;
+    text-align: center;
+    &.left {
+        align-self: flex-start;
+    }
+    &.right {
+        align-self: flex-end;
+    }
+    &:hover {
+        background-color: var(--color-grey-light-3);
+        cursor: pointer;
+    }
+}
+
+////////////////////////////////////////////////////
+// FEATURED-CARD
+.featured-card {
+    background-color: var(--color-grey-light-2);
+    border-width: 1px;
+    width: 84%;
+    padding: 0.6rem 1.2rem;
+    margin: 1.2rem;
+    text-align: center;
 }

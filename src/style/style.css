@@ -60,6 +60,10 @@ body {
     width: 90%;
     transition: all .2s;
     margin-right: -3.25rem; }
+    .search__input:hover {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
     .search__input:focus {
       outline: none;
       width: 100%;
@@ -67,6 +71,8 @@ body {
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
       color: var(--color-grey-light-4); }
+  .search__input:hover + .search__button {
+    background-color: var(--color-grey-light-3); }
   .search__input:focus + .search__button {
     background-color: var(--color-grey-light-3); }
   .search__button {
@@ -107,6 +113,30 @@ body {
     top: 2.8rem;
     right: 0rem; }
 
+.station-card {
+  border: solid;
+  border-color: var(--color-black);
+  border-width: 1px;
+  width: 88%;
+  padding: 0.6rem 1.2rem;
+  margin: .8rem;
+  text-align: center; }
+  .station-card.left {
+    align-self: flex-start; }
+  .station-card.right {
+    align-self: flex-end; }
+  .station-card:hover {
+    background-color: var(--color-grey-light-3);
+    cursor: pointer; }
+
+.featured-card {
+  background-color: var(--color-grey-light-2);
+  border-width: 1px;
+  width: 84%;
+  padding: 0.6rem 1.2rem;
+  margin: 1.2rem;
+  text-align: center; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -119,12 +149,13 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column; }
+  flex-grow: 1; }
 
 .tune-view {
-  flex-grow: 1; }
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .header {
   font-size: 1.4rem;
@@ -136,16 +167,3 @@ body {
   flex: 0 0 25%;
   display: flex;
   flex-direction: column; }
-  .sidebar__station-card {
-    background-color: var(--color-grey-light-2);
-    width: 88%;
-    padding: 0.6rem 1.2rem;
-    margin: .8rem;
-    text-align: center; }
-    .sidebar__station-card.left {
-      align-self: flex-start; }
-    .sidebar__station-card.right {
-      align-self: flex-end; }
-    .sidebar__station-card:hover {
-      background-color: var(--color-grey-light-3);
-      cursor: pointer; }
