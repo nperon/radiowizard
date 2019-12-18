@@ -2,7 +2,7 @@ import { Types, updateFeaturedAction } from '../actions/featured';
 
 export const searchMiddleware = store => next => action => {
     if ( action.type === Types.SEARCH_FOR_TEXT ) {
-        if ( action.payload.text.length < 3 ) return;
+        if ( action.payload.text.length < 2 ) return;
         const stations = action.payload.stations;
         const remainingStationNames = Object.keys( { ...stations } );
         const stationsWithRightTitle = Object.keys(stations).filter(
