@@ -60,6 +60,10 @@ body {
     width: 90%;
     transition: all .2s;
     margin-right: -3.25rem; }
+    .search__input:hover {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
     .search__input:focus {
       outline: none;
       width: 100%;
@@ -67,6 +71,8 @@ body {
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
       color: var(--color-grey-light-4); }
+  .search__input:hover + .search__button {
+    background-color: var(--color-grey-light-3); }
   .search__input:focus + .search__button {
     background-color: var(--color-grey-light-3); }
   .search__button {
