@@ -29,6 +29,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -128,8 +131,12 @@ body {
   .station-card:hover {
     background-color: var(--color-grey-light-3);
     cursor: pointer; }
+  @media only screen and (max-width: 56.25em) {
+    .station-card {
+      width: auto; } }
 
 .featured-card {
+  border: none;
   background-color: var(--color-grey-light-2);
   border-width: 1px;
   width: 84%;
@@ -142,20 +149,37 @@ body {
   margin: 8rem auto;
   background-color: var(--color-grey-light-2-transparent);
   box-shadow: var(--shadow-dark);
-  min-height: 72rem;
-  display: flex;
-  height: 100%; }
+  min-height: 60rem;
+  display: flex; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
+  @media only screen and (max-width: 68.75em) {
+    .container {
+      height: 90vh; } }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      flex-direction: column-reverse;
+      height: 90vh; } }
 
 .content {
   display: flex;
   flex-direction: column;
   flex-grow: 1; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column-reverse; } }
 
 .tune-view {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .tune-view {
+      width: auto; } }
 
 .header {
   font-size: 1.4rem;
@@ -167,3 +191,7 @@ body {
   flex: 0 0 25%;
   display: flex;
   flex-direction: column; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      flex-direction: row;
+      flex-wrap: wrap; } }
